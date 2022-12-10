@@ -1,6 +1,4 @@
 import nltk
-from nltk.tokenize import word_tokenize
-from nltk.tokenize import sent_tokenize
 from nltk.stem.lancaster import LancasterStemmer
 import numpy as np
 import tflearn
@@ -8,6 +6,7 @@ import tensorflow as tf
 import random
 import json
 import pickle
+import pymongo
 
 # part 3
 
@@ -15,9 +14,7 @@ nltk.download('punkt')
 
 stemmer = LancasterStemmer()
 
-
-with open("intents.json") as file:
-    data = json.load(file)
+client = pymongo.MongoClient('mongodb://localhost:27017/Final_Project')
 
 try:
     with open("data.pickle", "rb") as f:
