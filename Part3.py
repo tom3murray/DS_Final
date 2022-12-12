@@ -1,5 +1,13 @@
 import nltk
+
+nltk.download('punkt')
+
+from nltk import word_tokenize, sent_tokenize
+
 from nltk.stem.lancaster import LancasterStemmer
+
+stemmer = LancasterStemmer()
+# read more on the steamer https://towardsdatascience.com/stemming-lemmatization-what-ba782b7c0bd8
 import numpy as np
 import tflearn
 import tensorflow as tf
@@ -8,11 +16,8 @@ import json
 import pickle
 import pymongo
 
-# part 3
-
-nltk.download('punkt')
-
-stemmer = LancasterStemmer()
+with open("intents.json") as file:
+    data = json.load(file)
 
 client = pymongo.MongoClient('mongodb://localhost:27017/Final_Project')
 
@@ -110,9 +115,28 @@ def chat():
 
         if result[result_index] > 0.7:
             for tg in data["intents"]:
-                if tg['tag'] == tag:
-                    responses = tg['responses']
-            print(random.choice(responses))
+                if tg['tag'] == "Question_1":
+                    responses = client.Best_Movies.find({ $"YEAR" : {"$ep": "2020"}, "SCORE" : {}}).sort({'softcount':-1}).count(5)
+                elif tg['tag'] == "Question_2":
+                    responses =
+                elif tg['tag'] == "Question_3":
+                    responses =
+                elif tg['tag'] == "Question_4":
+                    responses =
+                elif tg['tag'] == "Question_5":
+                    responses =
+                elif tg['tag'] == "Question_6":
+                    responses =
+                elif tg['tag'] == "Question_7":
+                    responses =
+                elif tg['tag'] == "Question_8":
+                    responses =
+                elif tg['tag'] == "Question_9":
+                    responses =
+                elif tg['tag'] == "Question_10":
+                    responses =
+
+            print(responses)
 
         else:
             print("I didnt get that. Can you explain or try again.")
