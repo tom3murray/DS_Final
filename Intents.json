@@ -1,22 +1,22 @@
 
 {"intents": [
         {"tag": "Question_1",
-         "patterns": ["What were the top 10 movies in 2020"],
-         "responses": "",
+         "patterns": ["What were the top 10 movies in 2020?", "What were the top ten movies in 2020?", "Top 10 movies in 2020 by IMDB score?"],
+         "responses": [],
          "context_set": ""
         },
         {"tag": "Question_2",
-         "patterns": ["How long was the highest ranked movie in 2015"],
+         "patterns": ["How long was the highest ranked movie in 2015?", "How long was the best movie in 2015?", "How long was the highest rated movie in 2015?"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question_3",
-         "patterns": ["How many shows have a ranking above 7.5"],
+         "patterns": ["How many shows have a ranking above 7.5?", "How many shows are there with a ranking higher than 7.5?", "How many shows with a rating above 7.5?"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 4",
-         "patterns": ["What were the top 10 shows on Netflix in 2018"],
+         "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix?"],
          "responses": [],
          "context_set": ""
         }
