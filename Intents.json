@@ -21,7 +21,7 @@
          "context_set": ""
         }
         {"tag": "Question 5",
-         "patterns": ["What was the most common genre among the best movie rankings in 2016?", "What genre was most common in the best movie rankings in 2016?", "Which genre appeared the most among the best movie rankings in 2016?"],
+         "patterns": ["What was the genre of the best movie in 2016?", "What genre was the best movie in 2016?", "The highest ranked movie in 2016's had a ______ genre?"],
          "responses": [],
          "context_set": ""
         }
@@ -31,12 +31,12 @@
          "context_set": ""
         }
         {"tag": "Question 7",
-         "patterns": ["What is the average runtime of Netflix movies released in 2013", 'Average runtime movies 2013', 'Average runtime of movies released in 2013', 'On average, what was the runtime of movies in 2013'],
+         "patterns": ["What is the runtime of the longest Netflix movie released in 2013", 'longest runtime movies 2013', 'longest runtime of movies released in 2013', 'What was the runtime of the longest movie in 2013'],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 8",
-         "patterns": ["What is the average number of seasons for shows released in 2012", 'How many seasons per show in 2012', 'Average amount of seasons per show 2012', 'Average number of seasons per show 2012', '2012 seasons per show average'],
+         "patterns": ["What show had the most seasons on Netflix?", 'Most seasons for a show?', 'What netflix show had the most seasons?'],
          "responses": [],
          "context_set": ""
         }
