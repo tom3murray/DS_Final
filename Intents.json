@@ -16,17 +16,17 @@
          "context_set": ""
         }
         {"tag": "Question 4",
-         "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix?"],
+         "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix in 2018?", "Which were the top 10 shows on Netflix in 2018?"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 5",
-         "patterns": ["What was the most common genre among the best movie rankings in 2016"],
+         "patterns": ["What was the most common genre among the best movie rankings in 2016?", "What genre was most common in the best movie rankings in 2016?", "Which genre appeared the most among the best movie rankings in 2016?"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 6",
-         "patterns": ["In 2004, did the top movie or the top show have a higher ranking"],
+         "patterns": ["In 2004, did the top movie or the top show have a higher ranking?", "What had a higher ranking in 2004, the top movie or the top show?", "Was the top movie or the top show more highly ranked in 2004?"],
          "responses": [],
          "context_set": ""
         }
