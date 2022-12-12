@@ -1,15 +1,54 @@
 
 {"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Hey","Good day", "Whats up","Hola"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?","hurry up, I don't have all day"],
+        {"tag": "Question_1",
+         "patterns": ["What were the top 10 movies in 2020"],
+         "responses": "",
          "context_set": ""
         },
-        {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","bye"],
-         "responses": ["Sad to see you go..", "Talk to you later", "Goodbye!"],
+        {"tag": "Question_2",
+         "patterns": ["How long was the highest ranked movie in 2015"],
+         "responses": [],
          "context_set": ""
         }
-         
+        {"tag": "Question_3",
+         "patterns": ["How many shows have a ranking above 7.5"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 4",
+         "patterns": ["What were the top 10 shows on Netflix in 2018"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 5",
+         "patterns": ["What was the most common genre among the best movie rankings in 2016"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 6",
+         "patterns": ["In 2004, did the top movie or the top show have a higher ranking"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 7",
+         "patterns": ["What is the average runtime of Netflix movies released in 2013"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 8",
+         "patterns": ["What is the average number of seasons for shows released in 2012"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 9",
+         "patterns": ["What genre was the top Netflix show in 2019"],
+         "responses": [],
+         "context_set": ""
+        }
+        {"tag": "Question 10",
+         "patterns": ["How many movies released in year 2008 were rated R"],
+         "responses": [],
+         "context_set": ""
+        }
    ]
 }
