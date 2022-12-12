@@ -16,37 +16,37 @@
          "context_set": ""
         }
         {"tag": "Question 4",
-         "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix in 2018?", "Which were the top 10 shows on Netflix in 2018?"],
+         "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix?"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 5",
-         "patterns": ["What was the most common genre among the best movie rankings in 2016?", "What genre was most common in the best movie rankings in 2016?", "Which genre appeared the most among the best movie rankings in 2016?"],
+         "patterns": ["What was the most common genre among the best movie rankings in 2016"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 6",
-         "patterns": ["In 2004, did the top movie or the top show have a higher ranking?", "What had a higher ranking in 2004, the top movie or the top show?", "Was the top movie or the top show more highly ranked in 2004?"],
+         "patterns": ["In 2004, did the top movie or the top show have a higher ranking"],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 7",
-         "patterns": ["What is the average runtime of Netflix movies released in 2013"],
+         "patterns": ["What is the average runtime of Netflix movies released in 2013", 'Average runtime movies 2013', 'Average runtime of movies released in 2013', 'On average, what was the runtime of movies in 2013'],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 8",
-         "patterns": ["What is the average number of seasons for shows released in 2012"],
+         "patterns": ["What is the average number of seasons for shows released in 2012", 'How many seasons per show in 2012', 'Average amount of seasons per show 2012', 'Average number of seasons per show 2012', '2012 seasons per show average'],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 9",
-         "patterns": ["What genre was the top Netflix show in 2019"],
+         "patterns": ["What genre was the top Netflix show in 2019", '2019 top show genre', 'Top genre for shows in 2019', 'Top show genre in 2019'],
          "responses": [],
          "context_set": ""
         }
         {"tag": "Question 10",
-         "patterns": ["How many movies released in year 2008 were rated R"],
+         "patterns": ["How many movies released in 2008 were rated R", 'What is the number of R rated movies in 2008', 'How many R rated movies in 2008', 'How many R rated movies were released in 2008'],
          "responses": [],
          "context_set": ""
         }
