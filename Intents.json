@@ -9,17 +9,17 @@
          "patterns": ["How long was the highest ranked movie in 2015?", "How long was the best movie in 2015?", "How long was the highest rated movie in 2015?"],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question_3",
          "patterns": ["How many shows have a ranking above 7.5?", "How many shows are there with a ranking higher than 7.5?", "How many shows with a rating above 7.5?"],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 4",
          "patterns": ["What were the top 10 shows on Netflix in 2018?", "What were the top ten shows on Netflix in 2018?", "Which were the top 10 shows on Netflix in 2018?"],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 5",
          "patterns": ["What was the genre of the best movie in 2016?", "What genre was the best movie in 2016?", "The highest ranked movie in 2016's had a ______ genre?"],
          "responses": [],
@@ -29,22 +29,22 @@
          "patterns": ["In 2008, what was the lowest ranked movie?", "What movie had the lowest ranking in 2008?", "What was the worst movie in 2008?"],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 7",
          "patterns": ["What is the runtime of the longest Netflix movie released in 2013", 'longest runtime movies 2013', 'longest runtime of movies released in 2013', 'What was the runtime of the longest movie in 2013'],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 8",
          "patterns": ["What show had the most seasons on Netflix?", 'Most seasons for a show?', 'What netflix show had the most seasons?'],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 9",
          "patterns": ["What genre was the top Netflix show in 2019", '2019 top show genre', 'Top genre for shows in 2019', 'Top show genre in 2019'],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 10",
          "patterns": ["How many movies released in 2009 were rated R", 'What is the number of R rated movies in 2009', 'How many R rated movies in 2009', 'How many R rated movies were released in 2009'],
          "responses": [],
