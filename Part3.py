@@ -15,8 +15,8 @@ import random
 import json
 import pickle
 import pymongo
-import json
 from bson.json_util import dumps
+
 
 link = open("/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Intents.json")
 data = json.load(link)
@@ -179,8 +179,6 @@ def chat():
                     rating10 = str(json_list[9]["SCORE"])
                     movie10 = title10 +": "+ rating10
                     responses.append(movie10)
-
-
                 elif tg['tag'] == "Question_2":
                     filter = {'RELEASE_YEAR': 2015}
                     sort = list({'SCORE': -1}.items())
@@ -195,8 +193,6 @@ def chat():
                     duration1 = str(json_list[0]["DURATION"])
                     movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
                     responses.append(movie1)
-                    
-
                 elif tg['tag'] == "Question_3":
                     filter = {'SCORE': {'$gte': 7.5}}
                     sort = list({'SCORE': -1}.items())
@@ -208,12 +204,10 @@ def chat():
                     count = 0
                     for each in json_data:
                         count += 1
-                        each.append(".")
+                        each += "."
                         
                     count = str(count)
                     responses.append("There are " + count + " shows with rankings above 7.5")
-                        
-
                 elif tg['tag'] == "Question_4":
                     filter = {'RELEASE_YEAR': 2018}
                     sort = list({'SCORE': -1}.items())
@@ -228,7 +222,6 @@ def chat():
                     rating1 = str(json_list[0]["SCORE"])
                     show1 = title1 +": "+ rating1
                     responses.append(show1)
-
 
                     title2 = str(json_list[1]["TITLE"]) 
                     rating2 = str(json_list[1]["SCORE"])
@@ -274,7 +267,6 @@ def chat():
                     rating10 = str(json_list[9]["SCORE"])
                     show10 = title10 +": "+ rating10
                     responses.append(show10)
-
                 elif tg['tag'] == "Question_5":
                     filter = {'RELEASE_YEAR': 2016}
                     sort = list({'SCORE': -1}.items())
@@ -289,8 +281,6 @@ def chat():
                     genre1 = str(json_list[0]["MAIN_GENRE"])
                     movie1 = "The best movie was: "+ title1 + " with a genre of " + genre1
                     responses.append(movie1)
-                    
-
                 elif tg['tag'] == "Question_6":
                     filter = {'RELEASE_YEAR': 2008}
                     sort = list({'Score': 1}.items())
@@ -305,8 +295,6 @@ def chat():
                     rating1 = str(json_list[0]["SCORE"])
                     movie1 = "The worst movie was: "+ title1 + " with a score of " + rating1
                     responses.append(movie1)
-                    
-
                 elif tg['tag'] == "Question_7":
                     filter = {  'RELEASE_YEAR': 2013 }
                     sort = list({'DURATION': -1}.items())
@@ -321,8 +309,6 @@ def chat():
                     duration1 = str(json_list[0]["DURATION"])
                     movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
                     responses.append(movie1)
-                    
-
                 elif tg['tag'] == "Question_8":
                     filter = {}
                     sort = list({'NUMBER_OF_SEASONS': -1 }.items())
@@ -337,8 +323,6 @@ def chat():
                     seasons1 = str(json_list[0]["NUMBER_OF_SEASONS"])
                     show1 = title1 + " had the most seasons with: " + seasons1
                     responses.append(show1)
-                    
-
                 elif tg['tag'] == "Question_9":
                     filter = {'RELEASE_YEAR': 2019 }
                     sort = list({ 'SCORE': -1}.items())
@@ -353,8 +337,6 @@ def chat():
                     genre1 = str(json_list[0]["MAIN_GENRE"])
                     show1 = "The best show was: "+ title1 + " with a genre of " + genre1
                     responses.append(show1)
-                    
-
                 elif tg['tag'] == "Question_10":
                     filter = { 'RELEASE_YEAR': 2019 }
                     sort = list({'SCORE': -1}.items())
@@ -367,11 +349,12 @@ def chat():
                     count = 0
                     for each in json_data:
                         count += 1
-                        each.append(".")
+                        each += "."
                         
                     count = str(count)
                     responses.append("There are " + count + " movies that were rated 'R'")
-
+                    
+                    
             print(responses)
             responses.clear()
 
