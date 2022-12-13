@@ -21,7 +21,7 @@
          "context_set": ""
         },
         {"tag": "Question 5",
-         "patterns": ["What was the genre of the best movie in 2016?", "What genre was the best movie in 2016?", "The highest ranked movie in 2016's had a ______ genre?"],
+         "patterns": ["What was the genre of the best movie in 2016?", "What genre was the best movie in 2016?", "The highest ranked movie in 2016 was a?"],
          "responses": [],
          "context_set": ""
         }
