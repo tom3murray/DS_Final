@@ -15,6 +15,8 @@ import random
 import json
 import pickle
 import pymongo
+import json
+from bson.json_util import dumps
 
 link = open("/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Intents.json")
 data = json.load(link)
@@ -122,7 +124,62 @@ def chat():
                     limit = 10
 
                     result = client['Final_Project']['Best_Movies'].find(filter=filter,sort=sort,limit=limit)
-                    responses.append(result)
+                    
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+
+                    title1 = str(json_list[0]["TITLE"]) 
+                    rating1 = str(json_list[0]["SCORE"])
+                    movie1 = title1 +": "+ rating1
+                    responses.append(movie1)
+
+
+                    title2 = str(json_list[1]["TITLE"]) 
+                    rating2 = str(json_list[1]["SCORE"])
+                    movie2 = title2 +": "+ rating2
+                    responses.append(movie2)
+
+                    title3 = str(json_list[2]["TITLE"]) 
+                    rating3 = str(json_list[2]["SCORE"])
+                    movie3 = title3 +": "+ rating3
+                    responses.append(movie3)
+
+                    title4 = str(json_list[3]["TITLE"]) 
+                    rating4 = str(json_list[3]["SCORE"])
+                    movie4 = title4 +": "+ rating4
+                    responses.append(movie4)
+
+                    title5 = str(json_list[4]["TITLE"]) 
+                    rating5 = str(json_list[4]["SCORE"])
+                    movie5 = title5 +": "+ rating5
+                    responses.append(movie5)
+
+                    title6 = str(json_list[5]["TITLE"]) 
+                    rating6 = str(json_list[5]["SCORE"])
+                    movie6 = title6 +": "+ rating6
+                    responses.append(movie6)
+
+                    title7 = str(json_list[6]["TITLE"]) 
+                    rating7 = str(json_list[6]["SCORE"])
+                    movie7 = title7 +": "+ rating7
+                    responses.append(movie7)
+
+                    title8 = str(json_list[7]["TITLE"]) 
+                    rating8 = str(json_list[7]["SCORE"])
+                    movie8 = title8 +": "+ rating8
+                    responses.append(movie8)
+
+                    title9 = str(json_list[8]["TITLE"]) 
+                    rating9 = str(json_list[8]["SCORE"])
+                    movie9 = title9 +": "+ rating9
+                    responses.append(movie9)
+
+                    title10 = str(json_list[9]["TITLE"]) 
+                    rating10 = str(json_list[9]["SCORE"])
+                    movie10 = title10 +": "+ rating10
+                    responses.append(movie10)
+
 
                 elif tg['tag'] == "Question_2":
                     filter = {'RELEASE_YEAR': 2015}
@@ -130,22 +187,93 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Movies'].find(filter=filter, sort=sort, limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    duration1 = str(json_list[0]["DURATION"])
+                    movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
+                    responses.append(movie1)
+                    
 
                 elif tg['tag'] == "Question_3":
                     filter = {'SCORE': {'$gte': 7.5}}
                     sort = list({'SCORE': -1}.items())
 
                     result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    count = 0
+                    for each in json_data:
+                        count += 1
+                        each.append(".")
+                        
+                    count = str(count)
+                    responses.append("There are " + count + " shows with rankings above 7.5")
+                        
 
                 elif tg['tag'] == "Question_4":
-                    filter = {'RELEASE_YEAR': 2018,'SCORE': {'$gte': 7.5} }
+                    filter = {'RELEASE_YEAR': 2018}
                     sort = list({'SCORE': -1}.items())
                     limit = 10
 
                     result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+
+                    title1 = str(json_list[0]["TITLE"]) 
+                    rating1 = str(json_list[0]["SCORE"])
+                    show1 = title1 +": "+ rating1
+                    responses.append(show1)
+
+
+                    title2 = str(json_list[1]["TITLE"]) 
+                    rating2 = str(json_list[1]["SCORE"])
+                    show2 = title2 +": "+ rating2
+                    responses.append(show2)
+
+                    show3 = str(json_list[2]["TITLE"]) 
+                    rating3 = str(json_list[2]["SCORE"])
+                    movie3 = title3 +": "+ rating3
+                    responses.append(show3)
+
+                    title4 = str(json_list[3]["TITLE"]) 
+                    rating4 = str(json_list[3]["SCORE"])
+                    show4 = title4 +": "+ rating4
+                    responses.append(show4)
+
+                    title5 = str(json_list[4]["TITLE"]) 
+                    rating5 = str(json_list[4]["SCORE"])
+                    show5 = title5 +": "+ rating5
+                    responses.append(show5)
+
+                    title6 = str(json_list[5]["TITLE"]) 
+                    rating6 = str(json_list[5]["SCORE"])
+                    show6 = title6 +": "+ rating6
+                    responses.append(show6)
+
+                    title7 = str(json_list[6]["TITLE"]) 
+                    rating7 = str(json_list[6]["SCORE"])
+                    show7 = title7 +": "+ rating7
+                    responses.append(show7)
+
+                    title8 = str(json_list[7]["TITLE"]) 
+                    rating8 = str(json_list[7]["SCORE"])
+                    show8 = title8 +": "+ rating8
+                    responses.append(show8)
+
+                    title9 = str(json_list[8]["TITLE"]) 
+                    rating9 = str(json_list[8]["SCORE"])
+                    show9 = title9 +": "+ rating9
+                    responses.append(show9)
+
+                    title10 = str(json_list[9]["TITLE"]) 
+                    rating10 = str(json_list[9]["SCORE"])
+                    show10 = title10 +": "+ rating10
+                    responses.append(show10)
 
                 elif tg['tag'] == "Question_5":
                     filter = {'RELEASE_YEAR': 2016}
@@ -153,7 +281,15 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Movies'].find(filter=filter, sort=sort, limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    genre1 = str(json_list[0]["MAIN_GENRE"])
+                    movie1 = "The best movie was: "+ title1 + " with a genre of " + genre1
+                    responses.append(movie1)
+                    
 
                 elif tg['tag'] == "Question_6":
                     filter = {'RELEASE_YEAR': 2008}
@@ -161,7 +297,15 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Movies'].find( filter=filter,sort=sort,limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    rating1 = str(json_list[0]["SCORE"])
+                    movie1 = "The worst movie was: "+ title1 + " with a score of " + rating1
+                    responses.append(movie1)
+                    
 
                 elif tg['tag'] == "Question_7":
                     filter = {  'RELEASE_YEAR': 2013 }
@@ -169,7 +313,15 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Movies'].find(  filter=filter,sort=sort,   limit=limit )
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    duration1 = str(json_list[0]["DURATION"])
+                    movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
+                    responses.append(movie1)
+                    
 
                 elif tg['tag'] == "Question_8":
                     filter = {}
@@ -177,7 +329,15 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    seasons1 = str(json_list[0]["NUMBER_OF_SEASONS"])
+                    show1 = title1 + " had the most seasons with: " + seasons1
+                    responses.append(show1)
+                    
 
                 elif tg['tag'] == "Question_9":
                     filter = {'RELEASE_YEAR': 2019 }
@@ -185,7 +345,15 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Shows'].find(filter=filter, sort=sort,limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    
+                    title1 = str(json_list[0]["TITLE"]) 
+                    genre1 = str(json_list[0]["MAIN_GENRE"])
+                    show1 = "The best show was: "+ title1 + " with a genre of " + genre1
+                    responses.append(show1)
+                    
 
                 elif tg['tag'] == "Question_10":
                     filter = { 'RELEASE_YEAR': 2019 }
@@ -193,7 +361,16 @@ def chat():
                     limit = 1
 
                     result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
-                    responses.append(result)
+                    list_cur = list(result)
+                    json_data = dumps(list_cur)
+                    json_list = json.loads(json_data)
+                    count = 0
+                    for each in json_data:
+                        count += 1
+                        each.append(".")
+                        
+                    count = str(count)
+                    responses.append("There are " + count + " movies that were rated 'R'")
 
             print(responses)
             responses.clear()
