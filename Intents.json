@@ -31,22 +31,22 @@
          "context_set": ""
         },
         {"tag": "Question_7",
-         "patterns": ["What is the runtime of the longest Netflix movie released in 2013", 'longest runtime movies 2013', 'longest runtime of movies released in 2013', 'What was the runtime of the longest movie in 2013'],
+         "patterns": ["What is the runtime of the longest Netflix movie released in 2013", "longest runtime movies 2013", "longest runtime of movies released in 2013", "What was the runtime of the longest movie in 2013"],
          "responses": [],
          "context_set": ""
         },
         {"tag": "Question_8",
-         "patterns": ["What show had the most seasons on Netflix?", 'Most seasons for a show?', 'What netflix show had the most seasons?'],
+         "patterns": ["What show had the most seasons on Netflix?", "Most seasons for a show?", "What netflix show had the most seasons?"],
          "responses": [],
          "context_set": ""
         },
         {"tag": "Question_9",
-         "patterns": ["What genre was the top Netflix show in 2019", '2019 top show genre', 'Top genre for shows in 2019', 'Top show genre in 2019'],
+         "patterns": ["What genre was the top Netflix show in 2019", "2019 top show genre", "Top genre for shows in 2019", "Top show genre in 2019"],
          "responses": [],
          "context_set": ""
         },
         {"tag": "Question_10",
-         "patterns": ["How many movies released in 2009 were rated R", 'What is the number of R rated movies in 2009', 'How many R rated movies in 2009', 'How many R rated movies were released in 2009'],
+         "patterns": ["How many movies released in 2009 were rated R", "What is the number of R rated movies in 2009", "How many R rated movies in 2009", "How many R rated movies were released in 2009"],
          "responses": [],
          "context_set": ""
         }
