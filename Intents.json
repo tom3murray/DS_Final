@@ -24,7 +24,7 @@
          "patterns": ["What was the genre of the best movie in 2016?", "What genre was the best movie in 2016?", "The highest ranked movie in 2016 was a?"],
          "responses": [],
          "context_set": ""
-        }
+        },
         {"tag": "Question 6",
          "patterns": ["In 2008, what was the lowest ranked movie?", "What movie had the lowest ranking in 2008?", "What was the worst movie in 2008?"],
          "responses": [],
