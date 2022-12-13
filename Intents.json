@@ -26,7 +26,7 @@
          "context_set": ""
         }
         {"tag": "Question 6",
-         "patterns": ["In 2004, did the top movie or the top show have a higher ranking?", "What had a higher ranking in 2004, the top movie or the top show?", "Was the top movie or the top show more highly ranked in 2004?"],
+         "patterns": ["In 2008, what was the lowest ranked movie?", "What movie had the lowest ranking in 2008?", "What was the worst movie in 2008?"],
          "responses": [],
          "context_set": ""
         }
