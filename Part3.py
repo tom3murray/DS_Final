@@ -16,10 +16,10 @@ import json
 import pickle
 import pymongo
 
-with open("intents.json") as file:
-    data = json.load(file)
+link = open("/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Intents.json")
+data = json.load(link)
 
-client = pymongo.MongoClient('mongodb://localhost:27017/Final_Project')
+client = pymongo.MongoClient('mongodb://localhost:27017/')
 
 try:
     with open("data.pickle", "rb") as f:
