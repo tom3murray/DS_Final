@@ -46,7 +46,7 @@
          "context_set": ""
         }
         {"tag": "Question 10",
-         "patterns": ["How many movies released in 2008 were rated R", 'What is the number of R rated movies in 2008', 'How many R rated movies in 2008', 'How many R rated movies were released in 2008'],
+         "patterns": ["How many movies released in 2009 were rated R", 'What is the number of R rated movies in 2009', 'How many R rated movies in 2009', 'How many R rated movies were released in 2009'],
          "responses": [],
          "context_set": ""
         }
