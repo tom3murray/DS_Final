@@ -115,28 +115,88 @@ def chat():
 
         if result[result_index] > 0.7:
             for tg in data["intents"]:
+                responses = []
                 if tg['tag'] == "Question_1":
-                    responses = client.Best_Movies.find({ $"YEAR" : {"$ep": "2020"}, "SCORE" : {}}).sort({'softcount':-1}).count(5)
+                    filter = {'RELEASE_YEAR': 2020}
+                    sort = list({'SCORE': -1}.items())
+                    limit = 10
+
+                    result = client['Final_Project']['Best_Movies'].find(filter=filter,sort=sort,limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_2":
-                    responses =
+                    filter = {'RELEASE_YEAR': 2015}
+                    sort = list({'SCORE': -1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Movies'].find(filter=filter, sort=sort, limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_3":
-                    responses =
+                    filter = {'SCORE': {'$gte': 7.5}}
+                    sort = list({'SCORE': -1}.items())
+
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_4":
-                    responses =
+                    filter = {'RELEASE_YEAR': 2018,'SCORE': {'$gte': 7.5} }
+                    sort = list({'SCORE': -1}.items())
+                    limit = 10
+
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_5":
-                    responses =
+                    filter = {'RELEASE_YEAR': 2016}
+                    sort = list({'SCORE': -1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Movies'].find(filter=filter, sort=sort, limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_6":
-                    responses =
+                    filter = {'RELEASE_YEAR': 2008}
+                    sort = list({'Score': 1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Movies'].find( filter=filter,sort=sort,limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_7":
-                    responses =
+                    filter = {  'RELEASE_YEAR': 2013 }
+                    sort = list({'DURATION': -1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Movies'].find(  filter=filter,sort=sort,   limit=limit )
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_8":
-                    responses =
+                    filter = {}
+                    sort = list({'NUMBER_OF_SEASONS': -1 }.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_9":
-                    responses =
+                    filter = {'RELEASE_YEAR': 2019 }
+                    sort = list({ 'SCORE': -1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter, sort=sort,limit=limit)
+                    responses.append(result)
+
                 elif tg['tag'] == "Question_10":
-                    responses =
+                    filter = { 'RELEASE_YEAR': 2019 }
+                    sort = list({'SCORE': -1}.items())
+                    limit = 1
+
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
+                    responses.append(result)
 
             print(responses)
+            responses.clear()
 
         else:
             print("I didnt get that. Can you explain or try again.")
