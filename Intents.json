@@ -51,7 +51,7 @@
          "context_set": ""
         },
         {"tag": "help",
-         "patterns": ["help", "HELP", "Help", "What questions can I ask?", "Questions to ask"]
+         "patterns": ["help", "HELP", "Help", "What questions can I ask?", "Questions to ask"],
          "responses": ["What were the top 10 movies in 2020?", "How many movies released in 2009 were rated R", "What show had the most seasons on Netflix?", "What genre was the top Netflix show in 2019", "In 2008, what was the lowest ranked movie?"],
          "context_set": ""
         }
