@@ -401,7 +401,7 @@ def chat():
                     print("Here are some questions that you can ask: ")
                     response = tg['responses']
                     responses.append(response)
-
+            counter = 0
             for item in responses:
                 if counter < (len(responses) - 1):
                     print(item, end=", ")
