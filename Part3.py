@@ -403,8 +403,8 @@ def chat():
                     responses.append(response)
                     
                     
-                    
-            print(responses)
+            for item in responses:
+                print(item)
             responses.clear()
             
         else:
