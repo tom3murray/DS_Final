@@ -30,9 +30,9 @@ import pymongo
 Part 1
 '''
 # Read in the data
-best_movies = pd.read_csv(r'/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Data Files/Best Movies Netflix.csv')
-best_shows = pd.read_csv(r'/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Data Files/Best Shows Netflix.csv')
-raw_titles = pd.read_csv(r'/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Data Files/raw_titles.csv')
+best_movies = pd.read_csv(r'Best Movies Netflix.csv')
+best_shows = pd.read_csv(r'Best Shows Netflix.csv')
+raw_titles = pd.read_csv(r'raw_titles.csv')
 
 # Drop columns that contain unused data
 best_movies = best_movies[['TITLE',	'RELEASE_YEAR',	'SCORE', 'DURATION', 'MAIN_GENRE']]
