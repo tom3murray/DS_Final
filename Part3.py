@@ -19,7 +19,7 @@ import pymongo
 from bson.json_util import dumps
 
 
-link = open("/Users/andrewholzwarth/Desktop/DS 2002/Final_Project/Intents.json")
+link = open("Intents.json")
 data = json.load(link)
 
 client = pymongo.MongoClient('mongodb://localhost:27017/')
