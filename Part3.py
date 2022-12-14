@@ -119,8 +119,7 @@ def chat():
             for tg in data["intents"]:
                 responses = []
                 
-                if tg['tag'] == "Question_1":
-                    
+                if tag == "Question_1":
                     #Query Pymongo
                     filter = {'RELEASE_YEAR': 2020}
                     sort = list({'SCORE': -1}.items())
@@ -184,7 +183,7 @@ def chat():
                     movie10 = title10 +": "+ rating10
                     responses.append(movie10)
                     
-                elif tg['tag'] == "Question_2":
+                elif tag == "Question_2":
                     #Query Pymongo
                     filter = {'RELEASE_YEAR': 2015}
                     sort = list({'SCORE': -1}.items())
@@ -200,15 +199,14 @@ def chat():
                     #Find the relevant information from the JSON format
                     title1 = str(json_list[0]["TITLE"]) 
                     duration1 = str(json_list[0]["DURATION"])
-                    movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
+                    movie1 = "The longest movie was: "+ title1 + " with a length of " + duration1 + " minutes."
                     responses.append(movie1)
                     
-                elif tg['tag'] == "Question_3":
+                elif tag == "Question_3":
                     #Query Pymongo
                     filter = {'SCORE': {'$gte': 7.5}}
-                    sort = list({'SCORE': -1}.items())
                     
-                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort)
+                    result = client['Final_Project']['Best_Shows'].find(filter=filter)
                     
                     #Convert the pymongo cursor into a JSON file
                     list_cur = list(result)
@@ -216,15 +214,12 @@ def chat():
                     json_list = json.loads(json_data)
                     
                     #count the number of shows in the JSON file
-                    count = 0
-                    for each in json_data:
-                        count += 1
-                        each += "."
-                        
+                    count = len(json_list)
+                     
                     count = str(count)
                     responses.append("There are " + count + " shows with rankings above 7.5")
                     
-                elif tg['tag'] == "Question_4":
+                elif tag == "Question_4":
                     #Query Pymongo
                     filter = {'RELEASE_YEAR': 2018}
                     sort = list({'SCORE': -1}.items())
@@ -288,7 +283,7 @@ def chat():
                     show10 = title10 +": "+ rating10
                     responses.append(show10)
                     
-                elif tg['tag'] == "Question_5":
+                elif tag == "Question_5":
                     #Query Pymongo
                     filter = {'RELEASE_YEAR': 2016}
                     sort = list({'SCORE': -1}.items())
@@ -307,13 +302,13 @@ def chat():
                     movie1 = "The best movie was: "+ title1 + " with a genre of " + genre1
                     responses.append(movie1)
                     
-                elif tg['tag'] == "Question_6":
+                elif tag == "Question_6":
                     #Query Pymongo
-                    filter = {'RELEASE_YEAR': 2008}
-                    sort = list({'Score': 1}.items())
-                    limit = 1
+                    filter={'RELEASE_YEAR': 2008}
+                    sort=list({'SCORE': 1}.items())
+                    limit=1
                     
-                    result = client['Final_Project']['Best_Movies'].find( filter=filter,sort=sort,limit=limit)
+                    result = client['Final_Project']['Best_Movies'].find(filter=filter,sort=sort,limit=limit)
                     
                     #Convert the pymongo cursor object into JSON
                     list_cur = list(result)
@@ -326,7 +321,7 @@ def chat():
                     movie1 = "The worst movie was: "+ title1 + " with a score of " + rating1
                     responses.append(movie1)
                     
-                elif tg['tag'] == "Question_7":
+                elif tag == "Question_7":
                     #uery Pymongo
                     filter = {  'RELEASE_YEAR': 2013 }
                     sort = list({'DURATION': -1}.items())
@@ -345,7 +340,7 @@ def chat():
                     movie1 = "The longest movie was: "+ title1 + " with a lenght of " + duration1 + " minutes."
                     responses.append(movie1)
                     
-                elif tg['tag'] == "Question_8":
+                elif tag == "Question_8":
                     #Query Pymongo
                     filter = {}
                     sort = list({'NUMBER_OF_SEASONS': -1 }.items())
@@ -364,7 +359,7 @@ def chat():
                     show1 = title1 + " had the most seasons with: " + seasons1
                     responses.append(show1)
                     
-                elif tg['tag'] == "Question_9":
+                elif tag == "Question_9":
                     #Query Pymongo
                     filter = {'RELEASE_YEAR': 2019 }
                     sort = list({ 'SCORE': -1}.items())
@@ -383,13 +378,11 @@ def chat():
                     show1 = "The best show was: "+ title1 + " with a genre of " + genre1
                     responses.append(show1)
                     
-                elif tg['tag'] == "Question_10":
+                elif tag == "Question_10":
                     #Query Pymongo
-                    filter = { 'RELEASE_YEAR': 2019 }
-                    sort = list({'SCORE': -1}.items())
-                    limit = 1
+                    filter={'release_year': 2009, 'age_certification': 'R'}
                     
-                    result = client['Final_Project']['Best_Shows'].find(filter=filter,sort=sort,limit=limit)
+                    result = client['Final_Project']['Raw_Titles'].find(filter=filter)
                     
                     #convert the pymongo cursor object into JSON
                     list_cur = list(result)
@@ -397,18 +390,22 @@ def chat():
                     json_list = json.loads(json_data)
                     
                     #Find the number of movies in the JSON file
-                    count = 0
-                    for each in json_data:
-                        count += 1
-                        each += "."
+                    count = len(json_list)
+                     
+                    count = str(count)
                     
                     count = str(count)
                     responses.append("There are " + count + " movies that were rated 'R'")
+                elif tag == "help":
+                    print("Here are some questions that you can ask: ")
+                    response = tg['responses']
+                    responses.append(response)
+                    
                     
                     
             print(responses)
             responses.clear()
-
+            
         else:
             print("I didnt get that. Can you explain or try again.")
 
