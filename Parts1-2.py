@@ -1,25 +1,25 @@
 #Andrew Holzwarth, Tom Murray, Brett Carey
 
 # Questions bot will answer (allowing for different phrasing):
-# 1: What were the top X movies in year Y
+# 1: What were the top 10 movies in 2020?
     # [Best Movies Netflix]
-# 2: How long was the highest ranked movie in year X
+# 2: How long was the highest ranked movie in 2015?
     # [Best Movies Netflix]
-# 3: How many shows have a ranking above X
+# 3: How many shows have a ranking above 7.5?
     # [Best Shows Netflix]
-# 4: What were the top X shows on Netflix in year Y
+# 4: What were the top 10 shows on Netflix in 2018?
     # [Best Shows Netflix]
-# 5: What was the most common genre among the best movie rankings in year Y
+# 5: What was the genre of the best movie in 2016?
     # [Best Movies Netflix]
-# 6: In year X, did the top movie or the top show have a higher ranking
+# 6: In 2008, what was the lowest ranked movie?
     # [Best Movies Netflix, Best Shows Netflix]
-# 7: What is the average runtime of Netflix movies released in year X
+# 7: What is the runtime of the longest Netflix movie released in 2013
     # [raw_titles]
-# 8: What is the average number of seasons for shows released in year X
+# 8: What show had the most seasons on Netflix?
     # [raw_titles]
-# 9: What genre was the top Netflix show in year X
+# 9: What genre was the top Netflix show in 2019?
     # [Best Shows Netflix]
-# 10: How many movies released in year X were rated "R"
+# 10: How many movies released in 2009 were rated "R"
     # [raw_titles]
 
 
